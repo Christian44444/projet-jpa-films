@@ -1,14 +1,16 @@
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd" version="2.1">
-	<persistence-unit name="projet-jpa-films" transaction-type="RESOURCE_LOCAL">
+<!-- Le nom dans l'application-->	
+	<persistence-unit name="films" transaction-type="RESOURCE_LOCAL">
 	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 <!-- liste les classes à supprimer 
 	<class>fr.diginamic.Ville</class>
 	<class>fr.diginamic.Habitants</class>
 -->
 	<properties>
-		<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/projet-jpa-films" />
+<!-- Le nom dans la base-->	
+		<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/films" />
 		<property name="javax.persistence.jdbc.user" value="root" />
 		<property name="javax.persistence.jdbc.password" value="" />
 		<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
