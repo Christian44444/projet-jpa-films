@@ -10,7 +10,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-
 /**
  * @author cmich
  * Classe des acteurs pour la base de données
@@ -31,6 +30,7 @@ public class Acteur extends Personne {
 	@Column(name = "height",  precision = 2)
 	private double height;
 	
+	/** roles */
 	@OneToMany(mappedBy = "acteur")
 	private List<Role> roles = new ArrayList<Role>();
 
@@ -40,6 +40,7 @@ public class Acteur extends Personne {
 	public Acteur() {
 		super();
 	}
+	
 	/**
 	 * Renvoie l'objet sous forme de chaine de caractères
 	 */
@@ -52,6 +53,7 @@ public class Acteur extends Personne {
 	public String getIdRef() {
 		return idRef;
 	}
+	
 	/** @param idRef the idRef to set */
 	public void setIdRef(String idRef) {
 		this.idRef = idRef;
@@ -61,6 +63,7 @@ public class Acteur extends Personne {
 	public Naissance getNaissance() {
 		return naissance;
 	}
+	
 	/** @param naissance the naissance to set */
 	public void setNaissance(Naissance naissance) {
 		this.naissance = naissance;
@@ -70,6 +73,7 @@ public class Acteur extends Personne {
 	public double getHeight() {
 		return height;
 	}
+	
 	/** @param height the height to set */
 	public void setHeight(double height) {
 		this.height = height;
@@ -78,5 +82,4 @@ public class Acteur extends Personne {
 	public List<Role> getRoles() {
 		return roles;
 	}
-	
 }

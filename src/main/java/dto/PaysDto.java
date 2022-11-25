@@ -20,6 +20,7 @@ public class PaysDto {
 	public PaysDto() {
 		super();
 	}
+	
 	/**
 	 * Renvoie l'objet sous forme de chaine de caractères 
 	 */
@@ -27,29 +28,24 @@ public class PaysDto {
 	public String toString() {
 		return "PaysDto [nom=" + nom + ", url=" + url + "]";
 	}
-	/**
-	 * @return the nom
-	 */
+	
+	/** @return the nom  */
 	public String getNom() {
 		return nom;
 	}
-	/**
-	 * @param nom the nom to set
-	 */
+	
+	/** @param nom the nom to set 	 */
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-	/**
-	 * @return the url
-	 */
+	
+	/** @return the url */
 	public String getUrl() {
 		return url;
 	}
-	/**
-	 * @param url the url to set
-	 */
+	
+	/** @param url the url to set */
 	public void setUrl(String url) {
 		this.url = url;
 	}
-	
 }

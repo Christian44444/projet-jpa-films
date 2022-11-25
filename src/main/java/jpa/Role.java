@@ -42,6 +42,7 @@ public class Role {
 	public Role() {
 		super();
 	}
+	
 	/**
 	 * Renvoie l'objet sous forme de chaine de caractères
 	 */
@@ -49,38 +50,44 @@ public class Role {
 	public String toString() {
 		return "Role [characterName=" + characterName + ", idRef=" + idRef + "]";
 	}
+	
 	/** @return the id */
 	public Integer getId() {
 		return id;
 	}
+	
 	/** @param id the id to set */
 	public void setId(Integer id) {
 		this.id = id;
 	}
+	
 	/** @return the characterName */
 	public String getCharacterName() {
 		return characterName;
 	}
+	
 	/** @param characterName the characterName to set */
 	public void setCharacterName(String characterName) {
 		this.characterName = characterName;
 	}
+	
 	/** @return the idRef */
 	public String getIdRef() {
 		return idRef;
 	}
+	
 	/** @param idRef the idRef to set */
 	public void setIdRef(String idRef) {
 		this.idRef = idRef;
 	}
+	
 	/** @return the acteurs */
 	public Acteur getActeur() {
 		return acteur;
 	}
+	
 	/** @param acteur the acteur to set */
 	public void setActeur(Acteur acteur) {
 		this.acteur = acteur;
 	}
-	
-	
 }

@@ -4,14 +4,12 @@ import java.util.Date;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-
-
 /**
  * @author cmich
  * Classe Naissance pour import JSON
  */
 public class NaissanceDto {
-//	/** s1 pour travailler la date */
+//	/** s1 pour travailler la date - autre méthode ne faisant pas intervenir la redéfinition de la méthode jackson deserialize */
 //  voir plus bas le setter de s1 avant mise en commentaire cela marche	
 //	@JsonProperty("dateNaissance")
 //	private String s1;
@@ -22,6 +20,7 @@ public class NaissanceDto {
 	private Date dateNaissance;
 	/** lieuNaissance */
 	private String lieuNaissance;
+	
 	/** Constructeur
 	 * 
 	 */

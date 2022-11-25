@@ -41,6 +41,4 @@ public class GenreDto {
 	public void setLibelle(String libelle) {
 		this.libelle = libelle;
 	}
-	
-	
 }

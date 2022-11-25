@@ -11,6 +11,9 @@ import javax.persistence.Table;
 @Table(name = "realisateur")
 public class Realisateur extends Personne {
 
+	/** Constructeur
+	 * 
+	 */
 	public Realisateur() {
 		super();
 	}

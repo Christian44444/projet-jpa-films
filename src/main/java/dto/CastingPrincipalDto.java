@@ -22,12 +22,14 @@ public class CastingPrincipalDto {
 	private double height;
 	/** roles */
 	private List<RoleDto> roles;
+	
 	/** Constructeur
 	 *  
 	 */
 	public CastingPrincipalDto() {
 		super();
 	}
+	
 	/**
 	 * Renvoie l'objet sous forme de chaine de caractères
 	 */
@@ -36,6 +38,7 @@ public class CastingPrincipalDto {
 		return "castingPrincipalDto [idRef=" + idRef + ", identite=" + identite + ", naissance=" + naissance + ", url="
 				+ url + ", height=" + height + ", roles=" + roles + "]";
 	}
+	
 	/** @return the idRef */
 	public String getIdRef() {
 		return idRef;
@@ -84,8 +87,4 @@ public class CastingPrincipalDto {
 	public void setRoles(List<RoleDto> roles) {
 		this.roles = roles;
 	}
-	
-	
-	
-	
 }

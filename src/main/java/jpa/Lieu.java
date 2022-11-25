@@ -26,27 +26,24 @@ public class Lieu {
 	@Column(name = "id", length = 11, nullable = false)
 	private Integer id;
 	
-	/**
-	 * Ville du lieu
-	 */
+	/** Ville du lieu */
 	@Column(name = "ville", length = 120, nullable = true)
 	private String ville;
 	
-	/**
-	 * Etat région de la ville
-	 */
+	/** Etat région de la ville */
 	@Column(name = "etatDept", length = 120, nullable = true)
 	private String etatDept;
-	/**
-	 * Pays de la ville
-	 */
+	
+	/** Pays de la ville */
 	@ManyToOne
 	@JoinColumn(name = "paysId")
 	private Pays pays;
 	
+	/** naissances */
 	@OneToMany(mappedBy = "lieuNaissance")
 	private List<Naissance> naissances = new ArrayList<Naissance>();
 	
+	/** films */
 	@OneToMany(mappedBy = "lieuTournage")
 	private List<Film> films = new ArrayList<Film>();
 	
@@ -64,7 +61,6 @@ public class Lieu {
 	public String toString() {
 		return "LieuDto [ville=" + ville + ", etatDept=" + etatDept + ", pays=" + pays + "]";
 	}
-
 	
 	/** @return the id */
 	public Integer getId() {
@@ -76,39 +72,32 @@ public class Lieu {
 		this.id = id;
 	}
 
-	/**
-	 * @return the ville
-	 */
+	/** @return the ville */
 	public String getVille() {
 		return ville;
 	}
-	/**
-	 * @param ville the ville to set
-	 */
+	
+	/** @param ville the ville to set */
 	public void setVille(String ville) {
 		this.ville = ville;
 	}
-	/**
-	 * @return the etatDept
-	 */
+	
+	/** @return the etatDept */
 	public String getEtatDept() {
 		return etatDept;
 	}
-	/**
-	 * @param etatDept the etatDept to set
-	 */
+	
+	/** @param etatDept the etatDept to set */
 	public void setEtatDept(String etatDept) {
 		this.etatDept = etatDept;
 	}
-	/**
-	 * @return the pays
-	 */
+	
+	/** @return the pays */
 	public Pays getPays() {
 		return pays;
 	}
-	/**
-	 * @param pays the pays to set
-	 */
+	
+	/** @param pays the pays to set */
 	public void setPays(Pays pays) {
 		this.pays = pays;
 	}
@@ -117,5 +106,4 @@ public class Lieu {
 	public List<Naissance> getNaissances() {
 		return naissances;
 	}
-	
 }

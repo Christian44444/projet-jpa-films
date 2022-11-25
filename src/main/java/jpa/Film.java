@@ -52,29 +52,35 @@ public class Film {
 	@Column(name = "anneeSortie", columnDefinition = "YEAR")
 	private int     anneeSortie;
 	
+	/** pays */
 	@ManyToOne
 	@JoinColumn(name = "paysId")
 	private Pays    pays;
 	
+	/** langue */
 	@Column(name = "langue", length = 50, nullable = true)
 	private String  langue;
 	
+	/** lieuTournage */
 	@ManyToOne
 	@JoinColumn(name = "lieuId")
 	private Lieu    lieuTournage;
 	
+	/** realisateurs */
 	@ManyToMany
 	@JoinTable(name = "film_realisateur",
 			   joinColumns = @JoinColumn(name = "filmId", referencedColumnName = "id"),
 			   inverseJoinColumns = @JoinColumn(name = "realisateurId", referencedColumnName = "id"))
 	private List<Realisateur> realisateurs = new ArrayList<Realisateur>();
 	
+	/** acteurs */
 	@ManyToMany
 	@JoinTable(name = "film_acteur",
 			   joinColumns = @JoinColumn(name = "filmId", referencedColumnName = "id"),
 			   inverseJoinColumns = @JoinColumn(name = "acteurId", referencedColumnName = "id")) 
 	private List<Acteur> acteurs = new ArrayList<Acteur>();
 	
+	/** roles */
 	@ManyToMany
 	@JoinTable(name = "film_role",
 			   joinColumns = @JoinColumn(name = "filmId", referencedColumnName = "id"),
@@ -82,6 +88,7 @@ public class Film {
 	private List<Role> roles = new ArrayList<Role>();
 	
 	
+	/** genres */
 	@ManyToMany
 	@JoinTable(name = "film_genre",
 			   joinColumns = @JoinColumn(name = "filmId", referencedColumnName = "id"),
@@ -213,7 +220,4 @@ public class Film {
 	public List<Genre> getGenres() {
 		return genres;
 	}
-
-
-	
 }

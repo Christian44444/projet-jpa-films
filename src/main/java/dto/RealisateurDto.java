@@ -13,12 +13,14 @@ public class RealisateurDto {
 	 * url
 	 */
 	private String url;
+	
 	/**
 	 * Constructeur
 	 */
 	public RealisateurDto() {
 		super();
 	}
+	
 	/**
 	 * Renvoie l'objet sous forme de chaine de caractères
 	 */
@@ -26,30 +28,24 @@ public class RealisateurDto {
 	public String toString() {
 		return "RealisateurDto [identite=" + identite + ", url=" + url + "]";
 	}
-	/**
-	 * @return the identite
-	 */
+	
+	/** @return the identite */
 	public String getIdentite() {
 		return identite;
 	}
-	/**
-	 * @param identite the identite to set
-	 */
+	
+	/** @param identite the identite to set */
 	public void setIdentite(String identite) {
 		this.identite = identite;
 	}
-	/**
-	 * @return the url
-	 */
+	
+	/** @return the url */
 	public String getUrl() {
 		return url;
 	}
-	/**
-	 * @param url the url to set
-	 */
+	
+	/** @param url the url to set */
 	public void setUrl(String url) {
 		this.url = url;
 	}
-	
-	
 }

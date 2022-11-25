@@ -16,9 +16,6 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-
-
-
 /**
  * @author cmich
  * Classe Naissance pour la base de données
@@ -52,6 +49,7 @@ public class Naissance {
 	public Naissance() {
 		super();
 	}
+	
 	/**
 	 * Renvoie l'objet sous forme de chaine de caractères
 	 */
@@ -59,18 +57,22 @@ public class Naissance {
 	public String toString() {
 		return "Naissance [dateNaissance=" + dateNaissance + ", lieuNaissance=" + lieuNaissance + "]";
 	}
+	
 	/** @return the dateNaissance */
 	public Date getDateNaissance() {
 		return dateNaissance;
 	}
+	
 	/** @param dateNaissance the dateNaissance to set */
 	public void setDateNaiss(Date dateNaissance) {
 		this.dateNaissance = dateNaissance;  
 	}
+	
 	/** @return the lieuNaissance */
 	public Lieu getLieuNaissance() {
 		return lieuNaissance;
 	}
+	
 	/** @param lieuNaissance the lieuNaissance to set */
 	public void setLieuNaissance(Lieu lieuNaissance) {
 		this.lieuNaissance = lieuNaissance;

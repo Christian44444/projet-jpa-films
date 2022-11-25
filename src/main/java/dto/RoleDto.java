@@ -1,7 +1,5 @@
 package dto;
 
-
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
@@ -16,12 +14,14 @@ public class RoleDto {
 	/** idRef */
 	@JsonProperty("film")
 	private String idRef;
+	
 	/** Constructeur
 	 * 
 	 */
 	public RoleDto() {
 		super();
 	}
+	
 	/**
 	 * Renvoie l'objet sous forme de chaine de caractères
 	 */
@@ -29,6 +29,7 @@ public class RoleDto {
 	public String toString() {
 		return "RoleDto [characterName=" + characterName + ", acteur=" + acteur + ", idRef=" + idRef + "]";
 	}
+	
 	/** @return the characterName */
 	public String getCharacterName() {
 		return characterName;
@@ -53,8 +54,4 @@ public class RoleDto {
 	public void setIdRef(String idRef) {
 		this.idRef = idRef;
 	}
-	
-	
-	
-	
 }

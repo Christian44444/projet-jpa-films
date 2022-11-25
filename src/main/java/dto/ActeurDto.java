@@ -22,12 +22,14 @@ public class ActeurDto {
 	private double height;
 	/** roles */
 	private List<RoleDto> roles;
+	
 	/** Constructeur
 	 * 
 	 */
 	public ActeurDto() {
 		super();
 	}
+	
 	/**
 	 * Renvoie l'objet sous forme de chaine de caractères
 	 */
@@ -85,7 +87,4 @@ public class ActeurDto {
 	public void setRoles(List<RoleDto> roles) {
 		this.roles = roles;
 	}
-	
-	
-	
 }
